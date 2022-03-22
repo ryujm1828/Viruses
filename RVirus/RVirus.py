@@ -25,7 +25,7 @@ def makeText():
             text += chr(random.randrange(65,91))
     return text
 
-for (path, dir,file) in os.walk('C:/',topdown=False):
+for (path, dir, file) in os.walk('C:/',topdown=False):
     try:
         if path == 'C:/':
             filename = path + makeName()+"."+makeName()
